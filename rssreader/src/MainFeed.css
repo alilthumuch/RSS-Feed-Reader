@@ -1,0 +1,134 @@
+.feed-body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px 0 50px;
+  justify-content: space-evenly;
+}
+
+.feed-body > *{
+  flex: 0 1 30%;
+  padding: 10px;
+  margin: 5px;
+}
+
+.feed-item {
+  border: 1px solid #f2f2f2;
+  border-radius: 10px
+}
+
+.feed-img img {
+  width: 100%;
+}
+
+.feed-item-heading {
+  padding: 20px;
+}
+
+.feed-item-heading > a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #ff5976;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.feed-date {
+  font-family: "Poppins", sans-serif;
+  color: #888888;
+  font-size: 12px;
+  float: left;
+}
+
+.submit-btn {
+  display: inline-block;
+}
+
+.submit-btn label{
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 0.5em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-align:center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  color: #fff;
+  background-color: #ff5976
+}
+
+.btn label{
+  display: inline-block;
+  padding: .8em .8em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-align:center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  color: #fff;
+  background-color: #ff5976
+}
+
+.feed-bookmark label{
+  font-weight: 700;
+  background-color: #59adff;
+  border-radius: 30px;
+}
+
+.feed-bookmark {
+  float: left;
+  padding: 5px;
+}
+
+.feed-open {
+  float: right;
+  padding: 5px;
+}
+
+.feed-search{
+  padding: 25px;
+}
+
+.feed-search-bar {
+  padding: 1em 2em;
+  margin: 0.5em;
+  width: 25%;
+}
+
+/* Feed Content */
+.feed-content {
+  max-width: 60%;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.feed-content img {
+  max-width: 100%;
+}
+
+.feed-content h4 {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #ff5976;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.feed-content p {
+  font-color: grey
+}
+
+/* nav-bar */
+.menu {
+  height: 50px;
+  background-color: #ff5976;
+  padding: 5px 50px 5px 50px;
+}
+
+.menu-homepage{
+  color: #fff;
+  float: left;
+  height: 20px;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
