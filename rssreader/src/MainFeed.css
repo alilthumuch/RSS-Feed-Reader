@@ -68,15 +68,25 @@
   background-color: #ff5976
 }
 
-.feed-bookmark label{
+.feed-bookmark-selected {
+  float: left;
+  padding: 5px;
+}
+
+.feed-bookmark-selected label {
   font-weight: 700;
   background-color: #59adff;
-  border-radius: 30px;
 }
 
 .feed-bookmark {
   float: left;
   padding: 5px;
+}
+
+.feed-bookmark label{
+  font-weight: 700;
+  background-color: #fff;
+  color: #808080
 }
 
 .feed-open {
@@ -124,7 +134,7 @@
   padding: 5px 50px 5px 50px;
 }
 
-.menu-homepage{
+.menu-tab{
   color: #fff;
   float: left;
   height: 20px;

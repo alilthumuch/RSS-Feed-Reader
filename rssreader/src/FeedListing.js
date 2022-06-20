@@ -5,7 +5,7 @@ import XMLParser from 'react-xml-parser';
 import './MainFeed.css';
 
 const FeedListing = (props) => {
-  const {handleOpenFeed, handleSetFeedData, feedData} = props;
+  const {handleOpenFeed, handleSetFeedData, handleBookmarkData, feedData} = props;
   const [url, setUrl] = useState(null);
 
   const fetchFeedData = async () => {
@@ -18,15 +18,14 @@ const FeedListing = (props) => {
       .then(response => {
         if (response && response.data) {
         let feed = response.data.items && response.data.items.length ? response.data.items : response.data.feed ? [response.data.feed] : [];
-        console.log(feed)
         handleSetFeedData(feed);
         setUrl('')
         } else {
-          //display no feed available in body
+          //empty data handling
         }
       })
       .catch(err => {
-        //display error in main feed boody
+        //error handling
         console.log(err)
       })
   }
@@ -54,7 +53,7 @@ const FeedListing = (props) => {
     </div>
     <div className='feed-body'>
     {feedData.map(data =>
-      <div className='feed-item'>
+      <div className='feed-item' key={data.guid}>
         {data.thumbnail &&
           <div className='feed-img'>
             <img alt src={data.thumbnail}></img>
@@ -65,7 +64,7 @@ const FeedListing = (props) => {
             {data.title}
           </a>
         </div>
-        <div className='feed-bookmark btn' onClick={() => handleBookMarkData(data)}>
+        <div className={data.bookmark ? 'feed-bookmark-selected btn' : 'feed-bookmark btn'} onClick={() => handleBookmarkData(data)}>
           <div id='bookmark-btn'></div>
           <label for='bookmark-btn'>B!</label>
         </div>

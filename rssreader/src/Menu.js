@@ -5,7 +5,10 @@ const Menu = (props) => {
   return (
     <div className='menu'>
       <div onClick={() => handleMenuSelect('home')}>
-      <div className='menu-homepage'>Home</div>
+      <div className='menu-tab homepage'>Home</div>
+      </div>
+      <div onClick={() => handleMenuSelect('bookmark')}>
+      <div className='menu-tab bookmark'>Bookmark</div>
       </div>
     </div>
   )
